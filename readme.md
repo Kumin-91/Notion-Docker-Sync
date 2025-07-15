@@ -1,12 +1,12 @@
 # Notion Docker Sync
 
 도커 컨테이너 상태를 Notion DB에 자동 동기화하는 Python 코드입니다.
-`--sync` 옵션을 이용해 전체 동기화 (기존 내용도 덮어씀) 가능하며, 실시간 감지도 지원합니다.
+`--sync` 옵션을 이용해 전체 동기화 (기존 내용까지 덮어씀) 가능하며, 실시간 감지도 지원합니다.
 
 ## 기능
 - 컨테이너 상태 (running, exited, archived) 자동 기록
 - 마지막 상태 변경 시간, IP, 포트 자동 기록
-- 삭제된 컨테이너는 Notion DB 내에사 archived 상태로 표시 (노션에만 존재하는 항목에 대해서 수행)
+- 삭제된 컨테이너는 Notion DB 내에서 archived 상태로 표시 (노션에만 존재하는 항목에 대해서 수행)
 - Notion DB 다중 구성 가능
 - `.env` 통한 민감한 정보 관리
 
@@ -46,7 +46,7 @@ docker run -d \
   notion-docker-sync
 ```
 
-## 노션 DB 예시
+## Notion DB 예시
 ![Notion DB](./image/notion_page.png)
 ![Notion DB Sync](./image/notion_page_sync.gif)
 
