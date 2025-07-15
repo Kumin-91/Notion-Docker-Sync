@@ -14,7 +14,7 @@
 
 ### 1. 환경 변수 설정
 
-'.env' 파일 작성
+`.env` 파일 작성
 
 ```env
 NOTION_TOKEN=your_notion_token
