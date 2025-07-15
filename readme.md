@@ -47,8 +47,8 @@ docker run -d \
 ```
 
 ## Notion DB 예시
-![Notion DB](./image/notion_page.png)
-![Notion DB Sync](./image/notion_page_sync.gif)
+<img src="https://github.com/user-attachments/assets/c32ddf5e-8f7a-45a6-a588-4093175b7495" />
+<img src="https://github.com/user-attachments/assets/18ebc311-308e-4394-bca0-89a511f5fbf5" />
 
 ## 참고 사항
 - Notion DB 페이지는 사전에 구성되어 있어야 하며, 컨테이너 이름을 기준으로 식별합니다.
