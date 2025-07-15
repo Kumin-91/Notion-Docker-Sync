@@ -1,0 +1,8 @@
+#Python Virtual Environment
+notion_env/
+
+#Environment Variables
+.env
+
+#macOS
+.DS_Store
