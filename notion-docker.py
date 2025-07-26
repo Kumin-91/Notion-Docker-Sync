@@ -280,8 +280,11 @@ def main():
                     else:
                         #컨테이너가 시작되거나 중지된 경우 노션 데이터베이스 갱신
                         container_id = event.get('id')
-                        container = Docker.containers.get(container_id)
-                        update_notion(container, notion_db_cache)
+                        try:
+                            container = Docker.containers.get(container_id)
+                            update_notion(container, notion_db_cache)
+                        except Exception as e:
+                            print(f"[Warning] Container {container_id} not found. Skip. : {e}")
         except KeyboardInterrupt:
             print("Exiting...")
 
