@@ -9,9 +9,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install pyinstaller
 
-COPY notion-docker.py .
+COPY main.py .
+COPY env.py .
 
-RUN pyinstaller --onefile notion-docker.py
+RUN pyinstaller --onefile main.py
 
 #2단계: 실행
 FROM debian:bookworm-slim
@@ -19,7 +20,7 @@ FROM debian:bookworm-slim
 WORKDIR /app
 
 COPY .env .
-COPY --from=builder /app/dist/notion-docker .
+COPY --from=builder /app/dist/main .
 COPY entrypoint.sh .
 
 RUN chmod +x entrypoint.sh
