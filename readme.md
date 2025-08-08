@@ -40,7 +40,7 @@ docker run \
   notion-docker-sync --sync
 ```
 ```bash
-python3 notion-docker.py --sync
+python3 main.py --sync
 ```
 
 실시간 이벤트 감지
@@ -51,7 +51,7 @@ docker run -d \
   notion-docker-sync
 ```
 ```bash
-python3 notion-docker.py
+python3 main.py
 ```
 
 ## Notion DB 예시
